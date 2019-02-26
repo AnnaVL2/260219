@@ -10,13 +10,15 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Secret Number");
+            int g = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("type lucky number");
             Random engine = new Random();
             int secretNumber = engine.Next(100) + 1;
             
 
-            Console.WriteLine("Secret Number");
-            int g = Convert.ToInt32(Console.ReadLine());
+            
             //int m = secretNumber;
 
             //   (new Random !== secretNumber);
@@ -26,13 +28,17 @@ namespace ConsoleApp2
                 {
                     Console.WriteLine("too big");
                 }
-                else
+
+                if (secretNumber < g)
                 {
                     Console.WriteLine("too small");
                 }
+
+                g = Convert.ToInt32(Console.ReadLine());
             }
+            Console.WriteLine("Bingo");
        // תא זכרון שקולט כמה פעמים אני מנחשת
-            Console.WriteLine("bingo");
+            
                
            
         }
@@ -40,4 +46,3 @@ namespace ConsoleApp2
 
         }
     }
-}
